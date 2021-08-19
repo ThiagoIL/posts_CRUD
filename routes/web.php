@@ -18,3 +18,4 @@ Route::get('/', [PostagemController::class, 'index']);
 
 Route::get('/create', [PostagemController::class, 'create']);
 Route::post('/store', [PostagemController::class, 'store']);
+Route::delete('/delete',[PostagemController::class, 'delete']);

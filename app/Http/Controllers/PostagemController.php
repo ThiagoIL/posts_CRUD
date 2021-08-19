@@ -12,7 +12,7 @@ class PostagemController extends Controller
         $posts = Postagen::all();
 
 
-        return view('teste', ['posts'=>$posts]);
+        return view('list', ['posts'=>$posts]);
 
     }
 

@@ -19,7 +19,7 @@
             <td>{{ $poste->title }}</td>
             <td>{{ $poste->description }}</td>
             <td>{{ $poste->localization }}</td>
-            <td>{{ $poste->date }}</td>
+            <td>{{ $poste->date }} </td>
             <td><a href="#"class="btn btn-info"><img src="img\edit.svg" alt=""></a></td>
             <td><a href="#" class="btn btn-danger"><img src="img\delet.svg" alt=""></a></td>
         </tr>
