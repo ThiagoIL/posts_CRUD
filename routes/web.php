@@ -18,4 +18,5 @@ Route::get('/', [PostagemController::class, 'index']);
 
 Route::get('/create', [PostagemController::class, 'create']);
 Route::post('/store', [PostagemController::class, 'store']);
-Route::delete('/delete',[PostagemController::class, 'delete']);
+Route::get('/delete/{id}',[PostagemController::class, 'destroy']);
+Route::get('/updatecontrol/{id}',[PostagemController::class], 'edit');

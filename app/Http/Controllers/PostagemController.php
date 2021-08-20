@@ -34,4 +34,19 @@ class PostagemController extends Controller
         return redirect('/');
 
     }
+
+    public function destroy($id){
+        
+        Postagen::findOrFail($id)->delete();
+
+        return redirect('/');
+
+    }
+
+    public function edit($id){
+
+        $post = Postagen::findOrFail($id);
+
+        return view('edit', ['posts'=>$posts]);
+    }
 }
