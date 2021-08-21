@@ -15,6 +15,8 @@
             
         </tr>
     @foreach($posts as $poste)
+    
+    
         <tr>
             <td>{{ $poste->title }}</td>
             <td>{{ $poste->description }}</td>
@@ -23,9 +25,14 @@
             <td><a href="/updatecontrol/{{$poste->id}}"class="btn btn-info"><img src="img\edit.svg" alt=""></a></td>
             <td><a href="/delete/{{$poste->id}}" class="btn btn-danger"><img src="img\delet.svg" alt=""></a></td>
         </tr>
+    
     @endforeach
 
 </table>
+@if(count($posts) == 0 )
+       
+        <h4 class="center-h4" style="text-align: center">Cadastre uma postagem para vizualizar</h4>
+@endif
 
-<a class="btn btn-primary btn-lg" href="/create" role="button">Voltar</a>
+<a class="btn btn-primary btn-lg" href="/create" role="button">Cadastrar</a>
 @endsection

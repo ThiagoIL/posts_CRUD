@@ -1,12 +1,12 @@
 @extends('layouts.main')
-@section('title', 'Editar:' . $posts->title)
+@section('title',  $post->title)
 
 
 
 @section('content')
 
  <div id="event-create-container" class="col-md-6 offset-md-3">
-    <h1>crie sua postagem</h1>
+    <h1>edite sua postagem</h1>
 
     
     <form action="/update/{{$post->id}}" method="POST">
@@ -18,8 +18,8 @@
 
         </div>
         <div class="form-group">
-            <label for="descrition">Descrição</label>
-            <input type="text" class="form-control" id='descrition' name='descrition' value='{{$post->discription}}'>
+            <label for="description">Descrição</label>
+            <input type="text" class="form-control" id='description' name='description' value='{{$post->description}}'>
 
         </div>
         <div class="form-group">
@@ -29,12 +29,13 @@
         </div>
         <div class="form-group">
             <label for="date">Data</label>
-            <input type="date" class="form-control" id='date' name='date' value='{{ date("d/m/Y", strtotime($poste->date)) }} '>
+           
+            <input type="date" class="form-control" id='date' name='date' value="{{ $post->date->format('Y-m-d')}}" >
 
         </div>
         
         
-        <input type="submit" class="btn btn-primary" value="criar postagem">
+        <input type="submit" class="btn btn-primary "style="alignment='center-right'" value="Atualizar">
 
     </form>
 

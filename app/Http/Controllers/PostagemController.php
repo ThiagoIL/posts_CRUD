@@ -25,7 +25,7 @@ class PostagemController extends Controller
         $postagen = new Postagen;
 
         $postagen-> title = $request->title;
-        $postagen-> description = $request->descrition;
+        $postagen-> description = $request->description;
         $postagen-> localization = $request->localization;
         $postagen-> date = $request->date;
 
@@ -37,7 +37,7 @@ class PostagemController extends Controller
 
     public function destroy($id){
         
-        Postagen::findOrFail($id)->delete();
+        Postagen::findOrFail($id)->delete(); // metodo para deletar direto
 
         return redirect('/');
 
@@ -47,6 +47,17 @@ class PostagemController extends Controller
 
         $post = Postagen::findOrFail($id);
 
-        return view('edit', ['posts'=>$posts]);
+        return view('edit', ['post'=>$post]);
+    }
+
+    public function update(Request $request){
+
+
+        Postagen::findOrFail($request->id)->update($request->all());
+        
+
+
+        return redirect('/');
+        
     }
 }

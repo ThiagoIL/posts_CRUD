@@ -19,7 +19,7 @@ class CreatePostagensTable extends Migration
             $table->text('description');
             $table->string('title');
             $table->string('localization');
-            $table->date('date');
+            $table->dateTime('date');
         });
     }
 

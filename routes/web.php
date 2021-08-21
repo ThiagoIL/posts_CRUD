@@ -19,4 +19,6 @@ Route::get('/', [PostagemController::class, 'index']);
 Route::get('/create', [PostagemController::class, 'create']);
 Route::post('/store', [PostagemController::class, 'store']);
 Route::get('/delete/{id}',[PostagemController::class, 'destroy']);
-Route::get('/updatecontrol/{id}',[PostagemController::class], 'edit');
+Route::get('/updatecontrol/{id}',[PostagemController::class, 'edit']);
+Route::put('/update/{id}',[PostagemController::class, 'update']);
+

@@ -17,8 +17,8 @@
 
         </div>
         <div class="form-group">
-            <label for="descrition">Descrição</label>
-            <input type="text" class="form-control" id='descrition' name='descrition'>
+            <label for="description">Descrição</label>
+            <input type="text" class="form-control" id='description' name='description'>
 
         </div>
         <div class="form-group">

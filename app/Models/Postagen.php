@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Postagen extends Model
 {
     use HasFactory;
+
+    protected $dates = ['date'];
+    protected $guarded = [];
+
+    public function user(){
+        return $this->belongTo('App\Model\User');
+    }
 }
